@@ -21,3 +21,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "native_android"
 include(":app")
+include(":native_module")
