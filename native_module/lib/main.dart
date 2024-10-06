@@ -1,6 +1,11 @@
 import 'package:flutter/material.dart';
+import 'api_service.dart';
 
-void main() => runApp(const MyApp());
+void main() {
+  WidgetsFlutterBinding.ensureInitialized();
+  ApiService.setupMethodChannel();
+  runApp(const MyApp());
+}
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});

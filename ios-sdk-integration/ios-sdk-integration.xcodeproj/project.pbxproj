@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A0D53E2EAE8DDA935818687B /* Pods_ios_sdk_integration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25A45C5BD9D2F580F3712F4C /* Pods_ios_sdk_integration.framework */; };
+		9AFCF6322CB00286009241A8 /* Pods_ios_sdk_integration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25A45C5BD9D2F580F3712F4C /* Pods_ios_sdk_integration.framework */; };
+		9AFCF6332CB00286009241A8 /* Pods_ios_sdk_integration.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 25A45C5BD9D2F580F3712F4C /* Pods_ios_sdk_integration.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		FA2719102CAFC5E30068189D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA27190F2CAFC5E30068189D /* AppDelegate.swift */; };
 		FA2719122CAFC5E30068189D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2719112CAFC5E30068189D /* SceneDelegate.swift */; };
 		FA2719142CAFC5E30068189D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2719132CAFC5E30068189D /* ViewController.swift */; };
@@ -15,6 +16,20 @@
 		FA2719192CAFC5E60068189D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA2719182CAFC5E60068189D /* Assets.xcassets */; };
 		FA27191C2CAFC5E60068189D /* Base in Resources */ = {isa = PBXBuildFile; fileRef = FA27191B2CAFC5E60068189D /* Base */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		9AFCF6342CB00286009241A8 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				9AFCF6332CB00286009241A8 /* Pods_ios_sdk_integration.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		25A45C5BD9D2F580F3712F4C /* Pods_ios_sdk_integration.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ios_sdk_integration.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -35,7 +50,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A0D53E2EAE8DDA935818687B /* Pods_ios_sdk_integration.framework in Frameworks */,
+				9AFCF6322CB00286009241A8 /* Pods_ios_sdk_integration.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,7 +71,6 @@
 				435FE9FB0608BCD215F38D3A /* Pods-ios-sdk-integration.debug.xcconfig */,
 				3177A75AB7044C82F90BF42A /* Pods-ios-sdk-integration.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -105,6 +119,7 @@
 				FA2719092CAFC5E30068189D /* Frameworks */,
 				FA27190A2CAFC5E30068189D /* Resources */,
 				E88DC587C4945365C422C718 /* [CP-User] Embed Flutter Build native_module Script */,
+				9AFCF6342CB00286009241A8 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -276,7 +291,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -339,7 +354,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -366,6 +381,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				"FRAMEWORK_SEARCH_PATHS[arch=*]" = "$(PROJECT_DIR)/../native_module/.ios/Flutter/**";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "ios-sdk-integration/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
